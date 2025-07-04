@@ -14,7 +14,7 @@
 
 // Primitive datatype
 
-let name = "Muqeem" // String. In JavaScript you can enclosed the string with single or double quotes.
+let name = "Muqeem" // string. In JavaScript you can enclosed the string with single or double quotes.
 let age = 21 // int or number
 let isLoggedIn = false //boolean
 

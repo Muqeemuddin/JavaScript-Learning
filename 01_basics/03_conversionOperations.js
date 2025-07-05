@@ -26,3 +26,8 @@ let name = "muqeem"
 let booleanValueOfName = Boolean(name)
 
 console.log(booleanValueOfName);
+
+
+// ************************* Operations *******************************************
+
+ 

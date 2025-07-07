@@ -62,5 +62,5 @@ const me = Object.create(obj)
 console.log(Object.keys(obj))
 console.log(Object.values(obj))
 
-
+// To check if object has a property, use hasOwnProperty() method from Object.
 

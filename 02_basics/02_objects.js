@@ -49,7 +49,18 @@ myObj.greetingTwo = function(){
 console.log(myObj.greeting())
 console.log(myObj.greetingTwo())
 
+// Objects key, values and entries(key-value) can be extracted using the Object class methods
+// example 
 
+const obj = {
+    name : "muqeem",
+    age : 21
+}
+
+const me = Object.create(obj)
+
+console.log(Object.keys(obj))
+console.log(Object.values(obj))
 
 
 

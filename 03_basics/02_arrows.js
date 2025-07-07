@@ -15,4 +15,25 @@ console.log(sum(2,3))
 // Returning object using implicit return.
 
 const userObj = () => ({username:"Muqeem"});
-console.log(userObj())
+console.log(userObj());
+
+// ***************** Immediately Invoked Function Expression (IIFE) ***************
+
+// ()() this first bracket defines the function, the second bracket calls the function.
+// IIFE's are used to define the functions that require immdeiate execution.
+
+// the below is an example of named IIFE
+(function someFunc(){
+    console.log("Database server started")
+})();
+
+// Here is Unnamed IIFE
+(() => {
+    console.log("Unnamed IIFE function executed");
+})();
+
+// If any arguments need to be passed, then it happens through the call brackets.
+
+((name) => {
+    console.log(`unnmaed IIFE with argument ${name}`)
+})("created by Muqeem")

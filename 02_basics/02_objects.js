@@ -64,3 +64,13 @@ console.log(Object.values(obj))
 
 // To check if object has a property, use hasOwnProperty() method from Object.
 
+// Destructuring an Object.
+
+// As discussed earlier, accessing properties of an object can be done using dot and square bracket
+// Another method to access any property of an object
+
+const {name : fullname} = obj  // Here the string after colon in the bracket is a alias for name.
+
+console.log(fullname);
+
+

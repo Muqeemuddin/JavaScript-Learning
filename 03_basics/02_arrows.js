@@ -37,3 +37,4 @@ console.log(userObj());
 ((name) => {
     console.log(`unnmaed IIFE with argument ${name}`)
 })("created by Muqeem")
+

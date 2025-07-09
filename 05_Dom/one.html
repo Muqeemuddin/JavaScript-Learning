@@ -22,6 +22,10 @@
     <div class="day">Sunday</div>
 </body>
 <script>
-    
+    <!-- This script updates the div text to upper case -->
+    const days = document.querySelectorAll('.day');
+    days.forEach((d)=> {
+       d.textContent = d.textContent.toUpperCase();
+    })
 </script>
 </html>

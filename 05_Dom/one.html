@@ -18,14 +18,48 @@
     <div class="day">Wednesday</div>
     <div class="day">Thursday</div>
     <div class="day">Friday</div>
-    <div class="day">Saturday</div>
+    <div id="sat"; class="day">Saturday <span style="display:none"> night </span> is fun.</div>
     <div class="day">Sunday</div>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
 </body>
-<script>
-    <!-- This script updates the div text to upper case -->
+<!-- <script>
+    // This script updates the div text to uppercase
     const days = document.querySelectorAll('.day');
     days.forEach((d)=> {
        d.textContent = d.textContent.toUpperCase();
     })
-</script>
+</script> -->
+<!-- Let's look at the difference between innerHTML, textContent and innerText -->
+ <script>
+    const innerhtml = document.getElementById('sat').innerHTML;
+    console.log(innerhtml); //Output is Saturday <span style="display:none"> night </span> is fun.
+    const innertext = document.getElementById('sat').innerText;
+    console.log(innertext) // Output: Saturday is fun.
+    const textcontent = document.getElementById('sat').textContent;
+    console.log(textcontent) // Output : Saturday  night  is fun.
+
+    // Another way to fetch the elements is by using the query selector method.
+    // In the querySelector() method we need to pass the id with # and class name with . as string.
+
+    const day = document.querySelector('.day').textContent; // It will select the first element.
+    console.log(day)
+    document.querySelectorAll('.day').forEach((day) => {
+        console.log(day.textContent);
+    })
+
+    // In the querySlector method, we can also pass the html tags as argument to select the elements.
+    const turngreen = document.querySelector('ul').querySelector('li');
+    turngreen.style.color = "green";
+
+    document.querySelector('ul').querySelectorAll('li').forEach((li) => {
+        li.style.backgroundColor = '#414141';
+        li.style.color = 'green';
+    })
+ </script>
+
 </html>

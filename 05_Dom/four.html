@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Element Manipulation</title>
+</head>
+<body>
+    <div class="languages">
+        <li>Javascript</li>
+    </div>
+    <div class="libraries">
+        <li>SpringBoot</li>
+    </div>
+</body>
+<script>
+    function addElement(lang){
+        const element = document.createElement('li');
+        element.innerText=lang;
+        document.querySelector('.languages').appendChild(element);
+    }
+
+    addElement("Python")
+    addElement("Java")
+    
+    //edit elements
+    const secondLi = document.querySelector('li:nth-child(2)');
+    // secondLi.innerHTML = 'Typescript'; // Works but inefficient method told by Hitesh.
+    // Better approach
+    const newLi = document.createElement('li');
+    newLi.appendChild(document.createTextNode('GoLang'));
+    secondLi.replaceWith(newLi);
+
+    //edit
+    const firstElement = document.querySelector('li:first-child') //observe the arguments passing to the querySelector method.
+    firstElement.outerHTML = '<li>Swift</li>';
+
+    //remove element.
+    document.querySelector('li:last-child').remove(); // Java is the last element in the list, so that will be removed.
+
+</script>
+</html>

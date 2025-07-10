@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Creation</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    // Aim is to create elements using scripts.
+    const div = document.createElement('div') ;
+    div.className='main';
+    div.id = Math.round(Math.random() *10 +1);
+    div.setAttribute('title', 'firstElement') // preferred
+    div.innerText = "Hello World"; // .property way of defining things involve two steps. It first fetches the values from the
+    // element and then overrides on top of it. Using set attribute method directly assigns the property to the element.
+    console.log(div)
+    document.body.appendChild(div)
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | By Hitesh</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="month">Jan</div>
+        <div class="month">Feb</div>
+        <div class="month">Mar</div>
+        <div class="month">Apr</div>
+        <div class="month">May</div>
+        <div class="month">Jun</div>
+        <div class="month">Jul</div>
+        <div class="month">Aug</div>
+        <div class="month">Sep</div>
+        <div class="month">Oct</div>
+        <div class="month">Nov</div>
+        <div class="month">Dec</div>
+    </div>
+</body>
+<script>
+    // Aim is to learn about parent-child relationship.
+    const parent = document.querySelector('.parent');
+    console.log(parent.children[1].innerHTML) // The property "children" can be used to access the child of an element.
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML); 
+    }
+    console.log(parent.firstElementChild); // first child 'jan' is printed
+    console.log(parent.lastElementChild); // last child 'dec' is printed.
+
+    // querySelector is a expensive operation, as it needs to travel a document tree.
+    // as seen earlier, you can access the child element using a parent. Similarly,
+    // We can get to the parent element with the help of child elements.
+
+    const firstMonth = document.querySelector('.month');
+    console.log(firstMonth.parentElement)
+    console.log(firstMonth.nextElementSibling) // feb element is printed out.
+
+    // An important property to be aware of: childNodes.
+    // this property on any element shows all the children nodes under that element.
+    // example:
+    console.log("NODES: ", parent.childNodes); // If you observe, in the length of a node list is 25 but we have written only 12 months.
+    // The browser creates a very complex tree structure behind the scene. Even, the line breaks are also considered as node in the tree.
+
+</script>
+</html>

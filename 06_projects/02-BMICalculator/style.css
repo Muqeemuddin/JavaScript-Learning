@@ -21,4 +21,7 @@
 #results{
     margin-top: 20px;
     margin-bottom: 20px;
+    color: rgb(24, 194, 232);
+    font-weight: bolder;
+    font-size: larger;
 }

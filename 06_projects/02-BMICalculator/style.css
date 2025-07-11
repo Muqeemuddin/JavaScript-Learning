@@ -1,0 +1,19 @@
+.main{
+    background-color: #414141;
+}
+
+.canvas{
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+    color:#fff
+}
+.navbar{
+    text-align: center;
+}
+.homeLink{
+    -webkit-text-fill-color: #fff;
+}
+.ProfileLink{
+    -webkit-text-fill-color: #fff;
+}

@@ -10,10 +10,15 @@
 }
 .navbar{
     text-align: center;
+    margin-top: 20px;
 }
 .homeLink{
     -webkit-text-fill-color: #fff;
 }
 .ProfileLink{
     -webkit-text-fill-color: #fff;
+}
+#results{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

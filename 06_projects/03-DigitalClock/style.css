@@ -1,0 +1,36 @@
+.main{
+    background-color: #212121;
+    color:#fff;
+}
+
+.canvas{
+    margin: 100px auto 100px;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+}
+.navbar{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homeLink{
+    -webkit-text-fill-color: #fff;
+}
+.ProfileLink{
+    -webkit-text-fill-color: #fff;
+}
+
+.result{
+    display: inline-block; 
+    min-width: 120px;      
+    min-height: 20px;     
+    padding: 10px 20px;   
+    border: 2px solid #ccc; 
+    border-radius: 6px;    
+    background-color: #d2790d; 
+    text-align: center;   
+    vertical-align: middle; 
+    color: #fff;           
+    font-size: 16px;       
+}

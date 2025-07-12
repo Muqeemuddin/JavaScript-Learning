@@ -11,7 +11,24 @@ form.addEventListener('submit', (e) =>{
         results.innerHTML = "Please enter valid weight"
     }else{
         const bmi = Math.round((weight/ ((height*height)/10000))*10) / 10;
-        results.innerHTML = `Your BMI is ${bmi}`;
+        const span = document.createElement('span');
+        results.innerHTML = `<span>Your BMI is ${bmi}</span><br>`;
+        if(bmi<18.6){
+            span.textContent='You are Underweight';
+            span.style.color = 'orange';
+            results.appendChild(span)
+        }
+        if(bmi>=18.6 && bmi <= 24.9){
+            span.textContent='Your BMI is Normal';
+            span.style.color = 'green';
+            results.appendChild(span)
+        }
+        if(bmi>24.9){
+            span.textContent='You are Overweight';
+            span.style.color = 'red';
+            results.appendChild(span)
+            
+        }
     }
 })
 

@@ -39,4 +39,10 @@
 
 #subt{
     background-color: #05ca0c;
+    min-height: 40px;
+    min-width: 80px;
+}
+
+#numberInput{
+    min-height: 30px;
 }

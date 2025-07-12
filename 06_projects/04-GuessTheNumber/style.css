@@ -1,0 +1,42 @@
+.main{
+    background-color: #212121;
+    color:#fff;
+}
+
+
+.gameSection{
+    margin: 20px auto 10px;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+}
+
+.resultParams{
+    margin: 20px auto 10px;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+}
+
+.title{
+    margin: 100px auto 10px;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+}
+
+.navbar{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homeLink{
+    -webkit-text-fill-color: #fff;
+}
+.ProfileLink{
+    -webkit-text-fill-color: #fff;
+}
+
+#subt{
+    background-color: #05ca0c;
+}

@@ -76,6 +76,8 @@ function checkGuess(guessedNumber){
         dispalyMessage('Greater than that!!')
     }else{
         dispalyMessage('Horray!! You are right.')
+        document.getElementById('subt').disabled = true;
+        replay();
     }
 }
 
@@ -88,6 +90,7 @@ function dispalyMessage(message){
 function replay(){
     replayButton.className = 'restartButton'
     replayButton.innerHTML = 'Replay'
+    replayButton.id = 'subt'
     output.appendChild(document.createElement('br'))
     output.appendChild(replayButton)
 }

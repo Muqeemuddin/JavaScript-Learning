@@ -13,21 +13,20 @@
       <a href="/" aria-current="page" class="homeLink">Home</a>
       <a target="_blank" href="https://www.linkedin.com/in/muqeemuddin-mohammed/" class="ProfileLink">LinkedIn Profile</a>
     </nav>
-    <div>
-        <div class="canvas">
-            <h1>BMI Calculator</h1>
-            <form>
-                <p><lable>Height in CM: </lable><input type="text" id="height"/></p>
-                <p><label>Weight in KG: </label><input type="text" id="weight"/></p>
-                <button>Calculate</button>
-                <div id="results"></div>
-                <div id="weight-guide"></div>
-                    <h3>BMI Weight Guide</h3>
-                    <p>Under Weight = Less than 18.6</p>
-                    <p>Normal Range = Between 18.6 and 24.9</p>
-                    <p>Overweight = Greater than 24.9</p>
-                </div>
-            </form>
+    <div class="canvas">
+        <h1 class="title">BMI Calculator</h1>
+        <form>
+            <p><lable>Height in CM: </lable><input type="text" id="height"/></p>
+            <p><label>Weight in KG: </label><input type="text" id="weight"/></p>
+            <button>Calculate</button>
+            <div id="results"></div>
+        </form>
+        <div id="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under Weight = Less than 18.6</p>
+            <p>Normal Range = Between 18.6 and 24.9</p>
+            <p>Overweight = Greater than 24.9</p>
+        </div>      
     </div>
 </body>
 <script src="bmiCalculator.js"></script>

@@ -3,11 +3,14 @@
 }
 
 .canvas{
-    margin: 100px auto 100px;
+    margin: 50px auto 100px;
     width: 80%;
     text-align: center;
-    color:#fff
+    color:#212121;
+    font-size: x-large;
+    font-weight: bold;
 }
+
 .navbar{
     text-align: center;
     margin-top: 20px;
@@ -21,7 +24,13 @@
 #results{
     margin-top: 20px;
     margin-bottom: 20px;
-    color: rgb(24, 194, 232);
+    color: rgb(17, 12, 8);
     font-weight: bolder;
-    font-size: larger;
+    font-size: x-large;
+}
+body{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.0)), url("bgImgBMI.jpg") no-repeat center center;
+background-size: cover;
+background-repeat: no-repeat;
+background-position:top;
 }

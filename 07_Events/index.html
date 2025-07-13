@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Events are the actions or occurances triggered by the user through click, submit, hover press, touch etc.
+    // You can add events on any tag in three ways. 
+    // First, you can directly inject the events in the html code by adding a "onclick" property.(Not recommended. When applications scales it will create problems.)
+    // Second, You can assign the event to a "onlcick" property in javascript.
+    // document.getElementById('river').onclick = function(){
+    //     alert("River clicked")
+    // }
+
+    // // It's fine to use this method for adding events, but it gives you limited capabilities. It doesn't allow you to control
+    // // the Event Propagation.
+
+    // // Third but not last is addEventListener() method on the objects.
+
+    // document.getElementById('owl').addEventListener('click', ()=>{
+    //     alert("Owl got clicked")
+    // }, false)
+
+    // // Interesting thing if you observed there is a third parameter. IT's by default false even if you don't supply.
+    // // But What is this? What does it do? Wy is it even there?
+    // // That controls the event propagation.
+    // // The propagation of events can happen in two ways, 1. Bubble propagation and 2. Capture Propagation.
+    // // To see the difference, check the below code with first false and then true.
+
+    // document.getElementById('images').addEventListener('click', (e)=> {
+    //     console.log('Clicked in the UL')
+    //     //e.stopPropagation()
+    // }, true)
+
+    // document.getElementById('japan').addEventListener('click', (e)=>{
+    //     console.log('Clicked on japan')
+    //     console.log(e) // Go through the event properties in the console.
+    //     //e.stopPropagation();
+    // }, true)
+
+    // Let's have an event on removing the images with their tag.
+
+    document.querySelector('#images').addEventListener('click', (e)=> {
+        console.log(e.target) // target is a img tag
+        console.log(e.target.parentNode) // Gives the parent node of a target
+        console.log(e.target.tagName) // Gives the tag name of a target
+        e.preventDefault() // Disables the default behaviour of redirecting when you clicked on the link.
+        if(e.target.tagName === 'IMG')
+            e.target.parentNode.remove()
+    }, false)
+
+
+</script>
+</html>

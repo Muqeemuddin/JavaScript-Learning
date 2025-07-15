@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Colors</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div>
+        <p class="heading">Start Shoeld change the background color every 2 senond.</p>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+</body>
+<script>
+    const randomColor = function(){
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for(let i=0; i<6; i++){
+            color += hex[Math.floor(Math.random()*16)]
+        }
+        return color;
+    }
+    console.log(randomColor())
+    let startReference;
+    document.querySelector('#start').addEventListener('click', ()=> {
+        startReference = setInterval(()=>{
+            document.querySelector('body').style.backgroundColor = randomColor();
+        },1000) 
+    })
+
+    document.querySelector('#stop').addEventListener('click', ()=>{
+        clearInterval(startReference);
+    })
+</script>
+</html>

@@ -25,12 +25,17 @@
     let startReference;
     document.querySelector('#start').addEventListener('click', ()=> {
         startReference = setInterval(()=>{
-            document.querySelector('body').style.backgroundColor = randomColor();
-        },1000) 
+            if(startReference != null)
+                document.querySelector('body').style.backgroundColor = randomColor();
+        },50) 
+        console.log(startReference)
     })
-
+    console.log(`No click reference ${startReference}`)
     document.querySelector('#stop').addEventListener('click', ()=>{
         clearInterval(startReference);
+        console.log(startReference)
+        startReference = null; // The importance of this line can be understood when you press the start button twice and then try
+        // to press the stop. It will not stop changing the bg color without this line. Flushing is necessary.
     })
 </script>
 </html>

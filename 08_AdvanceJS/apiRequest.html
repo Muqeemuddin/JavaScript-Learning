@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Response</title>
+</head>
+<body>
+    <div class="heading">
+        <h2>API response from gitHub will appear below:</h2>
+        <p>Click the button to load the response.</p>
+        <button id="load">Load</button>
+    </div>
+    <img class="imageSection"></img>
+    <div class="followers"></div>
+</body>
+<script>
+    function load(){
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        const xhr = new XMLHttpRequest();
+        const imageSection = document.querySelector('.imageSection');
+        const followers = document.querySelector('.followers');
+        console.log(xhr.readyState)
+        xhr.open('GET', requestUrl); // The open method of HMLHttpRequest class is used to set the Http method type and URL to send the request to.
+        // In between setting and sending the request, the XMLHttpRequest maintains the states of the request.
+        // The various states it maintains are
+        /* 
+            Value	State	            Description
+                0	UNSENT	            Client has been created. open() not called yet.
+                1	OPENED	            open() has been called.
+                2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+                3	LOADING	            Downloading; responseText holds partial data.
+                4	DONE	            The operation is complete.
+        */
+        console.log(xhr.readyState)
+        // To check the conitnous change of the state in console. 
+        xhr.onreadystatechange = ()=>{
+            console.log(xhr.readyState) // You can see on the console that the request is being sent and response is recieved from states change.
+            if(xhr.readyState === 4){
+                const profile = JSON.parse(xhr.responseText);
+                imageSection.setAttribute('src',profile.avatar_url);
+                followers.innerHTML = `Followers - ${profile.followers}`;
+                console.log( imageSection)
+            }
+        }
+        xhr.send() // send method of the XMLHttpRequest class is used to send the request to the URL.
+        console.log(xhr.readyState)
+    }
+    document.querySelector('#load').addEventListener('click', ()=>{
+        load();
+    })
+</script>
+</html>
